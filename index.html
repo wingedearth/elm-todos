@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World - Elm</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="elm"></div>
+    <script src="elm.js"></script>
+    <script>
+        // Check if Elm is available in different ways
+        if (typeof Elm !== 'undefined') {
+            var app = Elm.Main.init({
+                node: document.getElementById('elm')
+            });
+        } else if (typeof this.Elm !== 'undefined') {
+            var app = this.Elm.Main.init({
+                node: document.getElementById('elm')
+            });
+        } else {
+            // Fallback - the app might have been initialized automatically
+            console.log('Elm object not found, checking if app was auto-initialized');
+            setTimeout(function() {
+                if (document.getElementById('elm').innerHTML === '') {
+                    document.getElementById('elm').innerHTML = '<h1 style="color: white; text-align: center; padding: 50px;">Elm app failed to load</h1>';
+                }
+            }, 100);
+        }
+    </script>
+</body>
+</html>
