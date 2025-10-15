@@ -40,6 +40,38 @@ A simple "Hello, World!" application built with Elm.
   npm run watch
   ```
 
+### Versioning & Releases
+
+This project uses [Conventional Commits](https://www.conventionalcommits.org/) and automated versioning:
+
+- **Create a release:**
+  ```bash
+  npm run release        # Patch version (1.0.0 -> 1.0.1)
+  npm run release:minor  # Minor version (1.0.0 -> 1.1.0)
+  npm run release:major  # Major version (1.0.0 -> 2.0.0)
+  ```
+
+- **Commit message format:**
+  ```
+  type(scope): description
+  
+  [optional body]
+  
+  [optional footer]
+  ```
+
+- **Commit types:**
+  - `feat`: New feature
+  - `fix`: Bug fix
+  - `docs`: Documentation changes
+  - `style`: Code style changes
+  - `refactor`: Code refactoring
+  - `perf`: Performance improvements
+  - `test`: Test changes
+  - `build`: Build system changes
+  - `ci`: CI configuration changes
+  - `chore`: Other changes
+
 ### Project Structure
 
 ```
