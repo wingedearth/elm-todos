@@ -1,6 +1,6 @@
-# Elm Hello World
+# Elm Todos
 
-A simple "Hello, World!" application built with Elm.
+A simple todo list application built with Elm.
 
 ## Getting Started
 
@@ -13,8 +13,8 @@ A simple "Hello, World!" application built with Elm.
 
 1. Clone the repository:
    ```bash
-   git clone git@github.com:wingedearth/elm-helloworld.git
-   cd elm-helloworld
+   git clone <repository-url>
+   cd elm-todos
    ```
 
 2. Install dependencies:
@@ -75,18 +75,28 @@ This project uses [Conventional Commits](https://www.conventionalcommits.org/) a
 ### Project Structure
 
 ```
-elm-helloworld/
+elm-todos/
 ├── src/
-│   └── Main.elm          # Main Elm application
-├── elm.json              # Elm project configuration
-├── index.html            # HTML entry point
-├── package.json          # npm scripts and dependencies
-└── README.md             # This file
+│   ├── Main.elm                  # Main Elm application
+│   ├── Components/               # UI components
+│   │   ├── Header.elm
+│   │   ├── TodoInput.elm
+│   │   └── TodoList.elm
+│   ├── Styles/                   # Styling modules
+│   ├── Types/                    # Type definitions
+│   └── Utils/                    # Utility functions
+├── elm.json                      # Elm project configuration
+├── index.html                    # HTML entry point
+├── package.json                  # npm scripts and dependencies
+└── README.md                     # This file
 ```
 
 ### What it does
 
-This app displays "Hello, World!" with centered styling using Elm's Browser.sandbox architecture.
+This app provides a simple todo list interface where you can:
+- Add new todo items
+- View your list of todos
+- Manage tasks using Elm's Browser.sandbox architecture
 
 ## Built With
 
